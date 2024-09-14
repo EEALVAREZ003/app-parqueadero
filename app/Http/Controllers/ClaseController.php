@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CentinelaController extends Controller
+class ClaseController extends Controller
 {
-    //    
+    //
     public function save (request $request){
         return response()->json([
             'status'=> '200',
@@ -16,7 +16,7 @@ class CentinelaController extends Controller
     }
 
     public function getdata (request $request){
-        $rta=10+20;
+        $rta=10+70;
         return response()->json([
             'status'=> '300',
             'message'=> 'data...',
