@@ -10,17 +10,15 @@ class DireccionpolicialController extends Controller
 {
     //
     public function save (request $request){
-       // $direccion=direccionpolicial::create([
-        //    'nombre'=>$request->nombre,
-        //]);
 
-        $direccion = new direccionpolicial();
+        $direccion=direccionpolicial::create([
+          'nombre'=>$request->nombre,
+        ]);
 
-        $direccion->nombre=$request->nombre;
-        $direccion->save();
+       // $direccion = new direccionpolicial();
 
-
-
+        //$direccion->nombre=$request->nombre;
+        //$direccion->save();
 
 
         return response()->json([
