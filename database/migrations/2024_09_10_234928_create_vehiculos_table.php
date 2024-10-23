@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_detalles');
+    
+     $table->unsignedBigInteger('id_detalles');
  
     $table->foreign('id_detalles')->references('id')->on('detalles');
 
@@ -28,6 +29,7 @@ return new class extends Migration
     $table->unsignedBigInteger('id_clasevehiculo');
  
     $table->foreign('id_clasevehiculo')->references('id')->on('clasevehiculos');
+    
 
             $table->timestamps();
         });

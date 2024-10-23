@@ -2,12 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
+use app\Models\direccionpolicial;
 
 class DireccionpolicialController extends Controller
 {
     //
     public function save (request $request){
+       // $direccion=direccionpolicial::create([
+        //    'nombre'=>$request->nombre,
+        //]);
+
+        $direccion = new direccionpolicial();
+
+        $direccion->nombre=$request->nombre;
+        $direccion->save();
+
+
+
+
+
         return response()->json([
             'status'=> '200',
             'message'=> 'guardado con exito',

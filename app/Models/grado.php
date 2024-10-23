@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class grado extends Model
 {
     use HasFactory;
+
+    protected $fillable= ['nombre'];
 }

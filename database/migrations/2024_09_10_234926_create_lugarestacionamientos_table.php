@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('lugarestacionamientos', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('id_interno');
+ 
+    $table->foreign('id_interno')->references('id')->on('internos');
+
+    $table->unsignedBigInteger('id_externo');
+ 
+    $table->foreign('id_externo')->references('id')->on('externos');
+
+
             $table->timestamps();
         });
     }

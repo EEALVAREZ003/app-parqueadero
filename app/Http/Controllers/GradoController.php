@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
+use app\models\grado;
 
 class GradoController extends Controller
 {
     //
     public function save (request $request){
+
+        $grado= new grado();
+
+        $grado->nombre=$request->nombre;
+        $grado->save();
+
         return response()->json([
             'status'=> '200',
             'message'=> 'guardado con exito',

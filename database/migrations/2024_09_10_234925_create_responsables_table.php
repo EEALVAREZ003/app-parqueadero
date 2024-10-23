@@ -16,6 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('id_grado');
  
             $table->foreign('id_grado')->references('id')->on('grados');
+
+            $table->unsignedBigInteger('id_seccional');
+ 
+    $table->foreign('id_seccional')->references('id')->on('seccionalpolicials');
         
             $table->timestamps();
         });

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('detalles', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('id_seccional');
+ 
+            $table->foreign('id_seccional')->references('id')->on('seccionalpolicials');
+
             $table->timestamps();
         });
     }

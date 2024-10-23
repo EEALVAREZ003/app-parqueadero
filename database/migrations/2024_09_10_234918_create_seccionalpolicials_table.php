@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('seccionalpolicials', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('id_direccion');
+ 
+    $table->foreign('id_direccion')->references('id')->on('direccionpolicials');
+
+
+
             $table->timestamps();
         });
     }

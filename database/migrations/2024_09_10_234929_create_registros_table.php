@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('hora_entrada');
             $table->string('hora_salida');            
-            $table->unsignedBigInteger('id_centinela');
+    
+    $table->unsignedBigInteger('id_centinela');
  
     $table->foreign('id_centinela')->references('id')->on('centinelas');
+
     $table->unsignedBigInteger('id_vehiculo');
  
     $table->foreign('id_vehiculo')->references('id')->on('vehiculos');
