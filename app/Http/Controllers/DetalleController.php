@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
 
 class DetalleController extends Controller
