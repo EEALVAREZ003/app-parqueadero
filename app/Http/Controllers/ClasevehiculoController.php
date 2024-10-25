@@ -4,15 +4,23 @@ namespace App\Http\Controllers;
 
 use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
+use App\Models\clasevehiculo;
 
-class ClaseController extends Controller
+class ClasevehiculoController extends Controller
 {
     //    
     public function save (request $request){
+        $clase=clasevehiculo::create ([
+            'marca'=>$request->marca
+       ] )
+    ;
+
+
+
         return response()->json([
             'status'=> '200',
             'message'=> 'guardado con exito',
-            'dato'=> $request->nombre
+            'dato'=> $request->marca
         ]);
     }
 

@@ -10,5 +10,5 @@ class direccionpolicial extends Model
     use HasFactory;
 
     protected $table='direccionpolicials';
-    protected $fillable=['nombres'];
+    protected $fillable=['nombre'];
 }

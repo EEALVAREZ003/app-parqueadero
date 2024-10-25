@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('externos', function (Blueprint $table) {
             $table->id();
+            $table->integer('puesto');
             $table->timestamps();
         });
     }

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class externo extends Model
 {
     use HasFactory;
+    protected $fillable=['puesto'];
 }

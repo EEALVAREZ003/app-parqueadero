@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CentinelaController;
-use App\Http\Controllers\ClaseController;
+use App\Http\Controllers\ClasevehiculoController;
 use App\Http\Controllers\DetalleController;
 use App\Http\Controllers\DireccionpolicialController;
 use App\Http\Controllers\ExternoController;
@@ -37,10 +37,10 @@ Route::get('/centinela/datos', [CentinelaController::class, 'getdata']);
 Route::put('/centinela/update', [CentinelaController::class, 'update']);
 Route::delete('/centinela/delete', [CentinelaController::class, 'delete']);
 
-Route::post('/clase/save', [ClaseController::class, 'save']);
-Route::get('/clase/datos', [ClaseController::class, 'getdata']);
-Route::put('/clase/update', [ClaseController::class, 'update']);
-Route::delete('/clase/delete', [ClaseController::class, 'delete']);
+Route::post('/clase/save', [ClasevehiculoController::class, 'save']);
+Route::get('/clase/datos', [ClasevehiculoController::class, 'getdata']);
+Route::put('/clase/update', [ClasevehiculoController::class, 'update']);
+Route::delete('/clase/delete', [ClasevehiculoController::class, 'delete']);
 
 Route::post('/detalle/save', [DetalleController::class, 'save']);
 Route::get('/detalle/datos', [DetalleController::class, 'getdata']);

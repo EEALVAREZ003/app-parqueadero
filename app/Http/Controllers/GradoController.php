@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
-use app\models\grado;
+use App\models\grado;
 
 class GradoController extends Controller
 {
     //
     public function save (request $request){
 
+        
+
         $grado= new grado();
 
-        $grado->nombre=$request->nombre;
+        $grado->nombres=$request->nombres;
         $grado->save();
 
         return response()->json([

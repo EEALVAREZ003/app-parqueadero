@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
+use App\Models\interno;
 
 class InternoController extends Controller
 {
     //
     public function save (request $request){
+        $externo=interno::create([
+            'puesto'=>$request->puesto,
+        ]);
         return response()->json([
             'status'=> '200',
             'message'=> 'guardado con exito',
-            'dato'=> $request->nombre
+            'dato'=> $request->puesto
         ]);
     }
 

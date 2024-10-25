@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class interno extends Model
 {
     use HasFactory;
+    protected $fillable=['puesto'];
+
 }

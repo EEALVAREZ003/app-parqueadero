@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('seccionalpolicials', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
 
             $table->unsignedBigInteger('id_direccion');
  

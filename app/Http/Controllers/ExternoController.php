@@ -4,24 +4,32 @@ namespace App\Http\Controllers;
 
 use app\http\Controllers\Controllers;
 use Illuminate\Http\Request;
+use App\Models\externo;
 
 class ExternoController extends Controller
 {
     //
     public function save (request $request){
+
+        $externo=externo::create([
+            'puesto'=>$request->puesto,
+        ]);
+
         return response()->json([
             'status'=> '200',
             'message'=> 'guardado con exito',
-            'dato'=> $request->nombre
+            'dato'=> $request->puesto
         ]);
     }
 
     public function getdata (request $request){
-        $rta=10+20;
+
+        $externo=externo:: all();
+
         return response()->json([
             'status'=> '300',
             'message'=> 'data...',
-            'resultado'=>$rta
+            'resultado'=>$externo
         ]);
     }
 

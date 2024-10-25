@@ -20,7 +20,7 @@ class DireccionpolicialController extends Controller
        // $direccion->save();
 
        $direccion=direccionpolicial::create([
-        'nombres'=>$request->nombres,
+        'nombre'=>$request->nombre,
 
        ]);
 
@@ -33,22 +33,42 @@ class DireccionpolicialController extends Controller
     }
 
     public function getdata (request $request){
-        $rta=10+20;
+
+        $direccion=direccionpolicial:: all();
+
         return response()->json([
             'status'=> '300',
             'message'=> 'data...',
-            'resultado'=>$rta
+            'resultado'=>$direccion
         ]);
     }
 
     public function update (request $request){
+
+        $direccion=direccionpolicial::findOrFail($request->id);
+
+        $direccion-> update([
+            'nombre'=>$request->nombre,
+        ]);
+        
+
         return response()->json([
             'status'=> '200',
-            'message'=> 'guardado con exito'
+            'message'=> 'actualizado con exito'
         ]);
     }    
 
     public function delete (request $request){
+
+        //$direccion = direccionpolicial::findOrFail ($request->id);
+
+        //$direccion-> delete ();
+
+        $direccion = direccionpolicial::findOrFail ($request->id);
+
+        $direccion-> delete ();
+
+
         return response()->json([
             'status'=> '200',
             'message'=> 'borrado con exito'
